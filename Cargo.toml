@@ -1,14 +1,16 @@
 [package]
 name = "{{crate_name}}"
 version = "0.1.0"
-authors = []
+authors = [{{authors}}]
 edition = "2018"
 readme = "README.md"
 
 [dependencies]
 cty = "0.2"
 esp_idf = "0.1"
+esp_idf_logger = "0.1"
 esp-idf-sys = "0.1"
+log = "0.4"
 
 [build-dependencies]
 esp_idf_build = "0.1"
