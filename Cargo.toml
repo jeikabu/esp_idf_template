@@ -1,7 +1,7 @@
 [package]
 name = "{{crate_name}}"
 version = "0.1.0"
-authors = [{{authors}}]
+authors = ["{{authors}}"]
 edition = "2018"
 readme = "README.md"
 
@@ -14,3 +14,13 @@ log = "0.4"
 
 [build-dependencies]
 esp_idf_build = "0.1"
+
+[profile.dev]
+lto = "fat"
+incremental = false # if enabled, `codegen-units` is ignored
+codegen-units = 1
+
+[profile.release]
+lto = "fat"
+incremental = false # if enabled, `codegen-units` is ignored
+codegen-units = 1
